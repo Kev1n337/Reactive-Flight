@@ -1,0 +1,12 @@
+force_cast: warning
+identifier_name: warning
+
+disabled_rules:
+  - trailing_whitespace
+  - weak_delegate
+
+identifier_name:
+  min_length: 2
+
+excluded:
+  - Pods
