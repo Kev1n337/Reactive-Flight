@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Reactive_Flight" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="MOO-E8-fUG" customClass="MapViewController" customModule="Reactive_Flight" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </mapView>
+                            <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L1n-Bi-EBp" customClass="SpriteKitViewController" customModule="Reactive_Flight" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </skView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oGI-gt-QLd">
+                                <rect key="frame" x="20" y="616" width="335" height="31"/>
+                                <color key="backgroundColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <size key="shadowOffset" width="1" height="1"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iiJ-Wa-GeB">
+                                <rect key="frame" x="306" y="616" width="51" height="31"/>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Planes/Partial/Datasets" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ION-Ph-ODh">
+                                <rect key="frame" x="20" y="586" width="335" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="0.50057768485915488" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="3m4-gB-8bu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="1" height="1"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iiJ-Wa-GeB" secondAttribute="trailing" constant="20" id="3Pm-7S-jey"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="iiJ-Wa-GeB" secondAttribute="bottom" constant="20" id="8G4-1W-e0l"/>
+                            <constraint firstItem="L1n-Bi-EBp" firstAttribute="top" secondItem="MOO-E8-fUG" secondAttribute="top" id="8rF-3x-aqW"/>
+                            <constraint firstAttribute="trailing" secondItem="MOO-E8-fUG" secondAttribute="trailing" id="9dy-cY-FRx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oGI-gt-QLd" secondAttribute="trailing" constant="20" id="9h5-xU-OM5"/>
+                            <constraint firstItem="L1n-Bi-EBp" firstAttribute="bottom" secondItem="MOO-E8-fUG" secondAttribute="bottom" id="Dt7-Ts-iNM"/>
+                            <constraint firstItem="MOO-E8-fUG" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="PyE-pm-Hcb"/>
+                            <constraint firstItem="L1n-Bi-EBp" firstAttribute="trailing" secondItem="MOO-E8-fUG" secondAttribute="trailing" id="Uwv-Yp-RVb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="oGI-gt-QLd" secondAttribute="bottom" constant="20" id="Vrx-nw-PJ4"/>
+                            <constraint firstItem="oGI-gt-QLd" firstAttribute="height" secondItem="iiJ-Wa-GeB" secondAttribute="height" id="e58-Bd-Lir"/>
+                            <constraint firstAttribute="bottom" secondItem="MOO-E8-fUG" secondAttribute="bottom" id="heH-4H-aq6"/>
+                            <constraint firstItem="ION-Ph-ODh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="lZp-KM-ncX"/>
+                            <constraint firstItem="L1n-Bi-EBp" firstAttribute="leading" secondItem="MOO-E8-fUG" secondAttribute="leading" id="r42-ra-HhJ"/>
+                            <constraint firstItem="oGI-gt-QLd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="sL9-I7-Icp"/>
+                            <constraint firstItem="oGI-gt-QLd" firstAttribute="top" secondItem="ION-Ph-ODh" secondAttribute="bottom" id="sNa-BD-t8u"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ION-Ph-ODh" secondAttribute="trailing" constant="20" id="vgy-7I-Z74"/>
+                            <constraint firstItem="MOO-E8-fUG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="wyQ-uo-XQl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="enableSwitch" destination="iiJ-Wa-GeB" id="Rvg-3M-zk2"/>
+                        <outlet property="mapView" destination="MOO-E8-fUG" id="UTw-xH-c8v"/>
+                        <outlet property="spriteKitView" destination="L1n-Bi-EBp" id="RUd-M9-JKM"/>
+                        <outlet property="statusLabel" destination="oGI-gt-QLd" id="12B-Fv-YFr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138.40000000000001" y="135.22167487684729"/>
+        </scene>
+    </scenes>
+</document>
