@@ -1,0 +1,15 @@
+language: objective-c
+osx_image: xcode9.2
+notifications:
+  email: false
+
+install:
+  - brew install swiftlint
+  - gem install xcpretty
+  - pod repo update
+  - pod install
+
+script:
+  - swiftlint lint || true
+  - xcodebuild -workspace Reactive\ Flight.xcworkspace -scheme Reactive\ Flight -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone X,OS=11.2' | xcpretty && exit ${PIPESTATUS[0]}
+
